@@ -1,6 +1,4 @@
 import { defineConfig } from "@pandacss/dev";
-import { segmentGroupRecipe } from "./src/style/recipes/SegmentGroupRecipe";
-import { buttonRecipe } from "./src/style/recipes/ButtonRecipe";
 import kathleenPreset from "./src/style/kathleenPreset";
 
 export default defineConfig({
@@ -16,16 +14,7 @@ export default defineConfig({
 
   // Useful for theme customization
   jsxFramework: "react",
-  theme: {
-    extend: {
-      recipes: {
-        button: buttonRecipe,
-      },
-      slotRecipes: {
-        segmentGroup: segmentGroupRecipe,
-      },
-    },
-  },
+  theme: {},
 
   globalCss: {
     ":root": {

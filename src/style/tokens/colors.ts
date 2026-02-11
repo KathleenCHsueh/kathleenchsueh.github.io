@@ -14,5 +14,6 @@ export const colors = defineTokens.colors({
   },
   background: {
     dark: { value: "#142030" },
+    blue: { value: "#183745" },
   },
 });

@@ -1,17 +1,19 @@
 import type React from "react";
 import { button } from "@styled-system/recipes";
 
-type ButtonProps = {
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
 };
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ className, children, ...props }: ButtonProps) => {
   return (
     <button
+      {...props}
       style={{
         width: "195px",
+        ...props.style,
       }}
-      className={button()}
+      className={className + " " + button()}
     >
       {children}
     </button>
